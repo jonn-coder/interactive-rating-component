@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Overpass", serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: 15px;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: hsl(216, 12%, 8%);
+  padding: 1.5em;
+  display: grid;
+  place-content: center;
+}
+main .card {
+  max-width: 415px;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 1em;
+  padding: 1.7em;
+}
+@media (width >= 600px) {
+  main .card {
+    border-radius: 2em;
+  }
+}
+main .card .headline {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.48rem;
+}
+@media (width >= 600px) {
+  main .card .headline {
+    font-size: 1.72rem;
+  }
+}
+@media (width >= 600px) {
+  main .rating-container {
+    padding: 2.3em;
+    padding-right: 2.55em;
+  }
+}
+main .rating-container .star {
+  width: 40px;
+  height: 40px;
+  padding: 0.5em;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  background-color: hsl(213, 19%, 22%);
+  margin-bottom: 1.5em;
+}
+main .rating-container .star img {
+  width: 14px;
+}
+@media (width >= 600px) {
+  main .rating-container .star img {
+    width: 17px;
+  }
+}
+@media (width >= 600px) {
+  main .rating-container .star {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 2.3em;
+  }
+}
+main .rating-container .headline {
+  margin-bottom: 0.7em;
+}
+@media (width >= 600px) {
+  main .rating-container .headline {
+    margin-bottom: 0.4em;
+  }
+}
+main .rating-container > p {
+  color: hsl(217, 12%, 63%);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+@media (width >= 600px) {
+  main .rating-container > p {
+    font-size: 0.93rem;
+    margin-bottom: 1.5em;
+  }
+}
+main .rating-container .rating-num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  color: hsl(217, 12%, 63%);
+  margin-bottom: 1.5em;
+}
+main .rating-container .rating-num li {
+  display: grid;
+  place-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: hsl(213, 19%, 22%);
+  border-radius: 50%;
+}
+main .rating-container .rating-num li:hover {
+  color: hsl(213, 19%, 18%);
+  background-color: hsl(25, 97%, 53%);
+  cursor: pointer;
+}
+@media (width >= 600px) {
+  main .rating-container .rating-num li {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (width >= 600px) {
+  main .rating-container .rating-num {
+    margin-bottom: 2.2em;
+  }
+}
+main .rating-container button {
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  border-radius: 2em;
+  padding: 1em;
+  display: block;
+  width: 100%;
+  color: hsl(213, 19%, 18%);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.88rem;
+}
+main .rating-container button:hover {
+  background-color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+@media (width >= 600px) {
+  main .rating-container button {
+    font-size: 0.9rem;
+  }
+}
+main .fade-out {
+  -webkit-animation-name: pop-out;
+          animation-name: pop-out;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@-webkit-keyframes pop-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+@keyframes pop-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+main .thank-you-container {
+  display: none;
+  padding-block: 2.1em;
+}
+@media (width > 678px) {
+  main .thank-you-container {
+    padding-block: 3em;
+    padding-right: 2.55em;
+  }
+}
+main .thank-you-container > img {
+  margin: 0 auto;
+  display: block;
+  width: 143px;
+  margin-bottom: 2em;
+}
+@media (width > 678px) {
+  main .thank-you-container > img {
+    width: initial;
+  }
+}
+main .thank-you-container .rating-selected {
+  background: hsl(213, 19%, 22%);
+  color: hsl(25, 97%, 53%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  font-size: 0.88rem;
+  padding: 0.3em 0.8em;
+  border-radius: 2em;
+  margin-bottom: 2em;
+}
+@media (width > 678px) {
+  main .thank-you-container .rating-selected {
+    font-size: 0.94rem;
+    padding: 0.35em 1.2em;
+    margin-bottom: 2.5em;
+  }
+}
+main .thank-you-container .headline {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+main .thank-you-container > p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  text-align: center;
+  color: hsl(217, 12%, 63%);
+}
+@media (width > 678px) {
+  main .thank-you-container > p {
+    font-size: 0.98rem;
+  }
+}
+main .fade-in {
+  -webkit-animation-name: pop-in;
+          animation-name: pop-in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@-webkit-keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
